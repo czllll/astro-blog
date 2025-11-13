@@ -1,11 +1,5 @@
 import type { ThemeConfig } from '@/types'
 
-const {
-  PUBLIC_GISCUS_REPO = '',
-  PUBLIC_GISCUS_REPO_ID = '',
-  PUBLIC_GISCUS_CATEGORY = '',
-  PUBLIC_GISCUS_CATEGORY_ID = '',
-} = import.meta.env
 
 export const themeConfig: ThemeConfig = {
   // SITE INFORMATION >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> START
