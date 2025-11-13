@@ -35,6 +35,10 @@ export function isAboutPage(path: string) {
   return isPageType(path, 'about')
 }
 
+export function isFragmentPage(path: string) {
+  return isPageType(path, 'memos')
+}
+
 // Returns page context with language, page types and localization helper
 export function getPageInfo(path: string) {
   const currentLang = getLangFromPath(path)
@@ -42,6 +46,7 @@ export function getPageInfo(path: string) {
   const isPost = isPostPage(path)
   const isTag = isTagPage(path)
   const isAbout = isAboutPage(path)
+  const isFragment = isFragmentPage(path)
 
   return {
     currentLang,
@@ -49,6 +54,7 @@ export function getPageInfo(path: string) {
     isPost,
     isTag,
     isAbout,
+    isFragment,
     getLocalizedPath: (targetPath: string) =>
       getLocalizedPath(targetPath, currentLang),
   }

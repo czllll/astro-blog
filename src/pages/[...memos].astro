@@ -1,0 +1,74 @@
+---
+import { render } from 'astro:content'
+import FragmentDate from '@/components/FragmentDate.astro'
+import { defaultLocale, moreLocales } from '@/config'
+import Layout from '@/layouts/Layout.astro'
+import { ui } from '@/i18n/ui'
+import { getmemos } from '@/utils/memos'
+
+export async function getStaticPaths() {
+  type PathItem = {
+    params: { memos: string }
+    props: { lang: string }
+  }
+
+  const paths: PathItem[] = []
+
+  paths.push({
+    params: { memos: 'memos/' },
+    props: { lang: defaultLocale },
+  })
+
+  moreLocales.forEach((lang: string) => {
+    paths.push({
+      params: { memos: `${lang}/memos/` },
+      props: { lang },
+    })
+  })
+
+  return paths
+}
+
+const { lang } = Astro.props
+const memos = await getmemos()
+const memosWithContent = await Promise.all(
+  memos.map(async fragment => {
+    const { Content } = await render(fragment)
+    return { entry: fragment, Content }
+  }),
+)
+type UILang = keyof typeof ui
+const isUILang = (value: string): value is UILang => value in ui
+const currentUILang = isUILang(lang) ? lang : (defaultLocale as UILang)
+const currentUI = ui[currentUILang]
+---
+
+<Layout>
+  {memosWithContent.length === 0 ? (
+    <section>
+      <div class="uno-decorative-line" />
+      <p class="mt-4 text-3.6 c-secondary">
+        {currentUI.memosEmpty}
+      </p>
+    </section>
+  ) : (
+    <ul>
+      {memosWithContent.map(({ entry, Content }) => (
+        <li class="mb-10.5 last:mb-0">
+          <div class="uno-decorative-line" />
+          <article class="mt-4">
+            <div class="flex flex-wrap items-baseline gap-3">
+              <FragmentDate
+                date={entry.data.published}
+                updatedDate={entry.data.updated}
+              />
+            </div>
+            <div class="heti mt-2 text-3.6 leading-relaxed">
+              <Content />
+            </div>
+          </article>
+        </li>
+      ))}
+    </ul>
+  )}
+</Layout>

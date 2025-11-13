@@ -1,0 +1,58 @@
+---
+import { themeConfig } from '@/config'
+
+interface Props {
+  date: Date
+  updatedDate?: Date
+}
+
+const { date, updatedDate } = Astro.props
+const { dateFormat: format } = themeConfig.global
+
+function formatDate(date: Date, format: 'YYYY-MM-DD' | 'MM-DD-YYYY' | 'DD-MM-YYYY' | 'MONTH DAY YYYY' | 'DAY MONTH YYYY') {
+  if (format === 'YYYY-MM-DD') {
+    return date.toISOString().split('T')[0]
+  }
+
+  const options: Intl.DateTimeFormatOptions = {
+    year: 'numeric',
+    month: format === 'MONTH DAY YYYY' || format === 'DAY MONTH YYYY' ? 'short' : '2-digit',
+    day: format === 'MONTH DAY YYYY' || format === 'DAY MONTH YYYY' ? 'numeric' : '2-digit',
+  }
+
+  switch (format) {
+    case 'MM-DD-YYYY':
+      return date.toLocaleDateString('en-US', options).replace(/\//g, '-')
+    case 'DD-MM-YYYY':
+      return date.toLocaleDateString('en-GB', options).replace(/\//g, '-')
+    case 'MONTH DAY YYYY':
+      return date.toLocaleDateString('en-US', {
+        year: 'numeric',
+        month: 'short',
+        day: 'numeric',
+      }).replace(',', '')
+    case 'DAY MONTH YYYY':
+      return date.toLocaleDateString('en-GB', {
+        year: 'numeric',
+        month: 'short',
+        day: 'numeric',
+      }).replace(',', '')
+    default:
+      return date.toISOString().split('T')[0]
+  }
+}
+---
+
+<div class="font-time text-3.4 lg:text-3.65">
+  <time datetime={date.toISOString().split('T')[0]}>
+    {formatDate(date, format)}
+  </time>
+  {updatedDate && (
+    <time
+      datetime={updatedDate.toISOString().split('T')[0]}
+      class="ml-1.75"
+    >
+      updated {formatDate(updatedDate, format)}
+    </time>
+  )}
+</div>

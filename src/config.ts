@@ -1,5 +1,12 @@
 import type { ThemeConfig } from '@/types'
 
+const {
+  PUBLIC_GISCUS_REPO = '',
+  PUBLIC_GISCUS_REPO_ID = '',
+  PUBLIC_GISCUS_CATEGORY = '',
+  PUBLIC_GISCUS_CATEGORY_ID = '',
+} = import.meta.env
+
 export const themeConfig: ThemeConfig = {
   // SITE INFORMATION >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> START
   site: {
@@ -58,10 +65,10 @@ export const themeConfig: ThemeConfig = {
   // GLOBAL SETTINGS >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> START
   global: {
     // default language
-    locale: 'zh', // de, en, es, fr, ja, ko, pl, pt, ru, zh, zh-tw
+    locale: 'zh', // zh, en
     // more languages
-    // not fill in the locale code above again, can be an empty array []
-    moreLocales: ['en', 'es', 'ja', 'ru', 'zh-tw'], // ['de', 'en', 'es', 'fr', 'ja', 'ko', 'pl', 'pt', 'ru', 'zh', 'zh-tw']
+    // do not include the default locale again
+    moreLocales: ['en'],
     // font styles for post text
     fontStyle: 'sans', // sans, serif
     // date format for posts
@@ -82,37 +89,15 @@ export const themeConfig: ThemeConfig = {
     // giscus
     // https://giscus.app/
     giscus: {
-      repo: '',
-      repoId: '',
-      category: '',
-      categoryId: '',
+      repo: PUBLIC_GISCUS_REPO,
+      repoId: PUBLIC_GISCUS_REPO_ID,
+      category: PUBLIC_GISCUS_CATEGORY,
+      categoryId: PUBLIC_GISCUS_CATEGORY_ID,
       mapping: 'pathname',
       strict: '0',
       reactionsEnabled: '1',
       emitMetadata: '0',
       inputPosition: 'bottom',
-    },
-    // twikoo
-    // https://twikoo.js.org/
-    twikoo: {
-      envId: '',
-      // version: frontend version can be changed in package.json
-    },
-    // waline
-    // https://waline.js.org/en/
-    waline: {
-      // server url
-      serverURL: 'https://retypeset-comment.radishzz.cc',
-      // emoji url
-      emoji: [
-        'https://unpkg.com/@waline/emojis@1.2.0/tw-emoji',
-        // 'https://unpkg.com/@waline/emojis@1.2.0/bmoji',
-        // more emojis: https://waline.js.org/en/guide/features/emoji.html
-      ],
-      // gif search
-      search: false, // true, false
-      // image uploader
-      imageUploader: false, // true, false
     },
   },
   // COMMENT SETTINGS >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> END
