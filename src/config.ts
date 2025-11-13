@@ -11,23 +11,23 @@ export const themeConfig: ThemeConfig = {
   // SITE INFORMATION >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> START
   site: {
     // site title
-    title: 'Retypeset',
+    title: 'ERYI',
     // site subtitle
-    subtitle: 'Revive the beauty of typography',
+    subtitle: 'Just Two One',
     // site description
-    description: 'Retypeset is a static blog theme based on the Astro framework. Inspired by Typography, Retypeset establishes a new visual standard and reimagines the layout of all pages, creating a reading experience reminiscent of paper books, reviving the beauty of typography. Details in every sight, elegance in every space.',
+    description: 'posts by time',
     // use i18n title/subtitle/description from src/i18n/ui.ts instead of static ones above
     i18nTitle: true, // true, false
     // author name
-    author: 'radishzz',
+    author: 'eryi',
     // site url
-    url: 'https://retypeset.radishzz.cc',
+    url: 'https://eryi.dev',
     // base path
     // root directory for all pages and assets
     base: '/', // e.g., '/blog', '/docs'
     // favicon url
     // recommended formats: svg, png or ico
-    favicon: '/icons/favicon.svg', // or https://example.com/favicon.svg
+    favicon: '/icons/favicon.png', // or https://example.com/favicon.svg
   },
   // SITE INFORMATION >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> END
 
@@ -89,10 +89,10 @@ export const themeConfig: ThemeConfig = {
     // giscus
     // https://giscus.app/
     giscus: {
-      repo: PUBLIC_GISCUS_REPO,
-      repoId: PUBLIC_GISCUS_REPO_ID,
-      category: PUBLIC_GISCUS_CATEGORY,
-      categoryId: PUBLIC_GISCUS_CATEGORY_ID,
+      repo: 'czllll/astro-blog',
+      repoId: 'R_kgDOQU9Uxg',
+      category: 'Announcements',
+      categoryId: 'DIC_kwDOQU9Uxs4CxwPm',
       mapping: 'pathname',
       strict: '0',
       reactionsEnabled: '1',
@@ -152,11 +152,11 @@ export const themeConfig: ThemeConfig = {
       },
       {
         name: 'GitHub',
-        url: 'https://github.com/radishzzz/astro-theme-retypeset',
+        url: 'https://github.com/czllll/',
       },
       {
         name: 'Email',
-        url: 'email@radishzz.cc',
+        url: 'dirtsaidot@gmail.com',
       },
       // {
       //   name: 'X',
@@ -164,7 +164,7 @@ export const themeConfig: ThemeConfig = {
       // },
     ],
     // year of website start
-    startYear: 2025,
+    startYear: 2023,
   },
   // FOOTER SETTINGS >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> END
 
