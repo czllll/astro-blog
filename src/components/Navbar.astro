@@ -8,7 +8,6 @@ const {
   isPost,
   isTag,
   isAbout,
-  isFragment,
   getLocalizedPath,
 } = getPageInfo(Astro.url.pathname)
 const currentUI = ui[currentLang as keyof typeof ui] ?? {}
@@ -16,7 +15,6 @@ const currentUI = ui[currentLang as keyof typeof ui] ?? {}
 const isPostActive = isHome || isPost
 const isTagActive = isTag
 const isAboutActive = isAbout
-const isFragmentActive = isFragment
 
 function getNavItemClass(isActive: boolean) {
   return isActive
@@ -31,9 +29,10 @@ const navItems = [
     className: getNavItemClass(isPostActive),
   },
   {
-    href: '/memos/',
-    label: currentUI.memos,
-    className: getNavItemClass(isFragmentActive),
+    href: 'https://notes.eryi.me',
+    label: currentUI.notes,
+    className: getNavItemClass(false),
+    external: true,
   },
   {
     href: '/tags/',
@@ -60,8 +59,10 @@ const navItems = [
     {navItems.map(item => (
       <li>
         <a
-          href={getLocalizedPath(item.href)}
+          href={item.external ? item.href : getLocalizedPath(item.href)}
           class={item.className}
+          target={item.external ? '_blank' : undefined}
+          rel={item.external ? 'noopener noreferrer' : undefined}
         >
           {item.label}
         </a>

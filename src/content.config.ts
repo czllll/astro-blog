@@ -34,16 +34,4 @@ const about = defineCollection({
   }),
 })
 
-const memos = defineCollection({
-  loader: glob({ pattern: '**/*.{md,mdx}', base: './src/content/memos' }),
-  schema: z.object({
-    published: z.date(),
-    updated: z.preprocess(
-      val => val === '' ? undefined : val,
-      z.date().optional(),
-    ),
-    draft: z.boolean().optional().default(false),
-  }),
-})
-
-export const collections = { posts, about, memos }
+export const collections = { posts, about }
