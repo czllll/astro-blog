@@ -1,10 +1,19 @@
 import type { CollectionEntry } from 'astro:content'
+import fs from 'node:fs'
+import path from 'node:path'
+import process from 'node:process'
 import { OGImageRoute } from 'astro-og-canvas'
 import { getCollection } from 'astro:content'
 import { getPostDescription } from '@/utils/description'
 
 // eslint-disable-next-line antfu/no-top-level-await
 const posts = await getCollection('posts')
+
+const ogLogoPath = path.resolve(process.cwd(), 'public', 'icons', 'og-logo.png')
+const fallbackLogoPath = path.resolve(process.cwd(), 'public', 'icons', 'favicon.png')
+const logoPath = fs.existsSync(ogLogoPath)
+  ? ogLogoPath
+  : (fs.existsSync(fallbackLogoPath) ? fallbackLogoPath : undefined)
 
 // Create slug-to-metadata lookup object for blog posts
 const pages = Object.fromEntries(
@@ -24,10 +33,14 @@ export const { getStaticPaths, GET } = OGImageRoute({
   getImageOptions: (_path, page) => ({
     title: page.title,
     description: page.description,
-    logo: {
-      path: './public/icons/og-logo.png', // Required local path and PNG format
-      size: [250],
-    },
+    ...(logoPath
+      ? {
+          logo: {
+            path: logoPath,
+            size: [250],
+          },
+        }
+      : {}),
     border: {
       color: [242, 241, 245],
       width: 20,
