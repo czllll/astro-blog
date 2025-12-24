@@ -9,6 +9,7 @@ export const ui = {
     tags: '标签',
     about: '关于',
     toc: '目录',
+    aibot: 'AIBot',
   },
   en: {
     title: 'ERYI',
@@ -19,5 +20,6 @@ export const ui = {
     tags: 'Tags',
     about: 'About',
     toc: 'Table of Contents',
+    aibot: 'AIBot',
   },
 }
