@@ -12,7 +12,7 @@ abbrlink: spring-servlet-recap
 ## Servlet
 
 Servlet 是一个用来处理 HTTP 请求并生成响应的 Java 类。
-![](https://img.dirtsai.work/image-20241213223146486.png)
+![](https://img.eryi.me/image-20241213223146486.png)
 
 * Servlet 容器把 HTTP 请求转换成 `HttpServletRequest` 对象，并准备好 `HttpServletResponse` 对象。
 * 随后容器把这两个对象交给某个 Web 组件，它可以访问 Bean 或数据库来创建动态内容。
@@ -37,7 +37,6 @@ public interface Servlet {
 
     void destroy();
 }
-
 
 // HttpServlet 中的 service 方法
     public void service(ServletRequest req, ServletResponse res) throws ServletException, IOException {
@@ -77,7 +76,7 @@ public interface Servlet {
 
 CGI 是一个标准协议，用来定义 Web 服务器如何和外部应用或脚本通信。CGI 程序可以由任何语言编写（C、C++、Perl、Python 等），负责处理请求并生成动态内容。
 
-![image-20241214143933871](https://img.dirtsai.work/image-20241214143933871.png)
+![image-20241214143933871](https://img.eryi.me/image-20241214143933871.png)
 
 可以看到，Web 服务器需要把每个请求都交给 CGI 程序来返回响应，而且服务器必须为每次请求都创建和销毁一个进程。
 

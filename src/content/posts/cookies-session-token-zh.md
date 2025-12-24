@@ -18,7 +18,7 @@ cookie 在[RFC 6265 ](https://datatracker.ietf.org/doc/html/rfc6265)HTTP状态�
 > To store state, the origin server includes a Set-Cookie header in an HTTP response.  In subsequent requests, the user agent returns a Cookie request header to the origin server.  The Cookie header contains cookies the user agent received in previous Set-Cookie headers.  The origin server is free to ignore the Cookie header or use its contents for an application-defined purpose.
 
 实际上就是说，为了在本几乎（HTTP/1.0之前）无状态的HTTP协议上进行会话管理，HTTP服务器可以在用户端存储**状态信息**，即存放在Cookie里。具体过程如下：
- ![cs-cookie](https://img.dirtsai.work/Pasted%20image%2020241030143916.png)
+ ![cs-cookie](https://img.eryi.me/Pasted%20image%2020241030143916.png)
 Cookie是HTTP的一个请求头，不一定只存放server set的cookie，还可以存放一些诸如偏好设置，语言设置的数据。只不过由于cookie的特性（每次HTTP请求都会携带），使得其比较适合存放session id（状态信息） 来进行会话管理。
 
 ## 为什么这样就能进行会话管理（session management）了呢？

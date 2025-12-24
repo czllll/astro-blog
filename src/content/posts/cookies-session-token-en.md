@@ -19,7 +19,7 @@ In web authentication we frequently encounter the three concepts *cookie*, *sess
 
 In other words, to perform session management on top of what used to be a stateless protocol (pre–HTTP/1.0), the server stores **state information** on the client in the form of cookies. The flow looks like this:
 
-![cs-cookie](https://img.dirtsai.work/Pasted%20image%2020241030143916.png)
+![cs-cookie](https://img.eryi.me/Pasted%20image%2020241030143916.png)
 
 Cookies are just HTTP headers. They do not have to contain only server-issued data; you could also keep preferences such as language. Because every HTTP request automatically carries cookies, they are perfect for storing a session ID (state) used in session management.
 

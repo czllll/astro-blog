@@ -12,7 +12,7 @@ abbrlink: spring-servlet-recap
 ## Servlet
 
 A servlet is a Java class that handles HTTP requests and generate responses.
-![](https://img.dirtsai.work/image-20241213223146486.png)
+![](https://img.eryi.me/image-20241213223146486.png)
 
 * The servlet container converts HTTP requests into a `HttpServletRequest` object and prepare `HttpServletResponse` object.
 * And these objects are delivered to a web component. Which can interact with beans or database to generate dynamic content.
@@ -76,7 +76,7 @@ Early server-side extensions came in different forms:
 
 CGI (Common Gateway Interface) is a standardized protocol that defines how web servers communicate with external applications or scripts. These CGI programs can be written in any programming language (like C, C++, Perl, Python, etc.) and are responsible for processing requests and generating dynamic content.
 
-![image-20241214143933871](https://img.dirtsai.work/image-20241214143933871.png)
+![image-20241214143933871](https://img.eryi.me/image-20241214143933871.png)
 
 We can see that the web server need to pass every request to the CGI applications to get the response from it. And the server has to create and destroy the process for every request.
 
