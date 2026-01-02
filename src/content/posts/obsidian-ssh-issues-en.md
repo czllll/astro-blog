@@ -10,13 +10,15 @@ lang: en
 abbrlink: obsidian-ssh-issues
 ---
 
+*This post was translated by LLM.*
+
 ## Where the problem came from
 
 * After configuring the Obsidian Git plugin, every upload reported `permission denied`. I remembered that the CLI always asked me to “enter passphrase for key id_rsa” whenever I ran `git push`, so it was clear that the plugin failed because it could not input the passphrase while executing the script.
 
 ## Digging deeper
 
-* What exactly is SSH? What are the public key and private key we generated?
+* What exactly is SSH? What are the public key and private key we translated?
 * Why does `git push` trigger the passphrase prompt, and what is the passphrase protecting?
 
 ## What is SSH
@@ -49,7 +51,7 @@ abbrlink: obsidian-ssh-issues
       b. The client encrypts the username, authentication method, and public key with the session key and sends the result to the server.  
       c. The server decrypts the packet using the session key, checks whether the `.ssh` directory contains the corresponding public key, and, if it finds a match, encrypts a random challenge with that public key and then again with the session key.  
       d. The client decrypts twice (session key + private key), re-encrypts the challenge with the session key, and sends it back.  
-      e. The server decrypts with the session key, compares the challenge with the one it generated, and accepts or rejects accordingly.
+      e. The server decrypts with the session key, compares the challenge with the one it translated, and accepts or rejects accordingly.
    3. **password**
       a. The client encrypts the username, authentication method, and password with the session key and sends the packet.  
       b. The server decrypts it, validates the credentials, and returns success or failure.

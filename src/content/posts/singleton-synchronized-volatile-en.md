@@ -10,6 +10,8 @@ lang: en
 abbrlink: singleton-synchronized-volatile
 ---
 
+*This post was translated by LLM.*
+
 ## Implementing the Singleton Pattern
 
 The definition of a singleton says that a class must guarantee there is only **one** instance and must offer a global access point. In practice we usually distinguish between the **lazy** (create on first use) and the **eager** (create when the class is loaded) strategies.

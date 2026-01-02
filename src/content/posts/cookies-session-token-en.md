@@ -8,6 +8,8 @@ tags:
 lang: en
 abbrlink: cookies-session-token
 ---
+
+*This post was translated by LLM.*
 In web authentication we frequently encounter the three concepts *cookie*, *session*, and *token*. They form the basis of an application’s identity system, so it is important to understand how they work together.
 
 ## Cookie
@@ -45,7 +47,7 @@ Because cookies carry the session ID, there is always a risk of leakage even if 
 
 > JSON Web Token (JWT) is a compact, URL-safe means of representing claims to be transferred between two parties. The claims in a JWT are encoded as a JSON object that is used as the payload of a JSON Web Signature (JWS) structure or as the plaintext of a JSON Web Encryption (JWE) structure, enabling the claims to be digitally signed or integrity protected with a Message Authentication Code (MAC) and/or encrypted.
 
-This tells us two things: 1) the content is JSON when created; 2) JWT supports two protection modes, JWS and JWE. A JWT on the wire looks like `Header.Payload.Signature`, i.e., three parts separated by dots. Here is how a JWT is generated.
+This tells us two things: 1) the content is JSON when created; 2) JWT supports two protection modes, JWS and JWE. A JWT on the wire looks like `Header.Payload.Signature`, i.e., three parts separated by dots. Here is how a JWT is translated.
 
 ## Creating a JWT
 

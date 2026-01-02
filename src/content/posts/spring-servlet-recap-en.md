@@ -9,6 +9,8 @@ tags:
 lang: en
 abbrlink: spring-servlet-recap
 ---
+
+*This post was translated by LLM.*
 ## Servlet
 
 A servlet is a Java class that handles HTTP requests and generate responses.
@@ -65,7 +67,7 @@ public interface Servlet {
 
 ### Why we need servlet
 
-At first, the HTTP server can only provide static content, like plain HTML files. Server-side extensions were developed to enable dynamic content generation. This means pages could be generated based on user input, database, etc.
+At first, the HTTP server can only provide static content, like plain HTML files. Server-side extensions were developed to enable dynamic content generation. This means pages could be translated based on user input, database, etc.
 
 Early server-side extensions came in different forms:
 
