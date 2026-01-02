@@ -14,9 +14,9 @@ abbrlink: 2025recap
 
 ![九又四分之三站台](https://img.eryi.me/astro-blog/2026/01/IMG_8092.JPG)
 
-![塔桥](https://img.eryi.me/astro-blog/2026/01/IMG_8113.JPG)
+![金融城](https://img.eryi.me/astro-blog/2026/01/IMG_8113.JPG)
 
-![金融城](https://img.eryi.me/astro-blog/2026/01/IMG_8115.JPG)
+![塔桥](https://img.eryi.me/astro-blog/2026/01/IMG_8115.JPG)
 
 七月份快回国的时候去了一趟曼城，滑稽的是，去曼城前不久Oasis 的主唱刚好在推上发表了“Ching Chong“这样的辱华词汇。去曼城的时候刚好 Oasis 在开巡演，街上路牌都是那两兄弟的宣传服，我也凑热闹的去了一下 Oasis 的快闪店，虽然啥都没买lol。随后又去图灵公园和图灵合了个影，最后在街上随便走了走。
 

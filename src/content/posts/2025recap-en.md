@@ -16,9 +16,9 @@ Looking back at the timeline, I was studying for my Master's in the UK from Janu
 
 ![Platform 9 3/4](https://img.eryi.me/astro-blog/2026/01/IMG_8092.JPG)
 
-![Tower Bridge](https://img.eryi.me/astro-blog/2026/01/IMG_8113.JPG)
+![The City](https://img.eryi.me/astro-blog/2026/01/IMG_8113.JPG)
 
-![The City](https://img.eryi.me/astro-blog/2026/01/IMG_8115.JPG)
+![Tower Bridge](https://img.eryi.me/astro-blog/2026/01/IMG_8115.JPG)
 
 In July, just before returning home, I visited Manchester. Ironically, shortly before my trip, the lead singer of Oasis had posted offensive "Ching Chong" remarks on Twitter. Oasis happened to be on tour when I was there, and the streets were filled with promotional posters of the two brothers. I joined the crowd and visited the Oasis pop-up store, though I didn't buy anything lol. Later, I took a photo with the Alan Turing statue in Turing Park and just wandered around the streets.
 
