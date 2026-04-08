@@ -5,6 +5,8 @@ published: 2025-12-23
 updated: 2025-01-02
 tags:
   - yearly-recap
+protected: true
+passwordEnv: POST_2025RECAP_PASSWORD
 lang: zh
 abbrlink: 2025recap
 ---

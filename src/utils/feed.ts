@@ -139,11 +139,12 @@ export async function generateFeed({ lang }: { lang?: string } = {}) {
     'posts',
     ({ data }: { data: CollectionEntry<'posts'>['data'] }) => {
       const isNotDraft = !data.draft
+      const isNotProtected = !data.protected
       const isCorrectLang = data.lang === lang
         || data.lang === ''
         || (lang === undefined && data.lang === defaultLocale)
 
-      return isNotDraft && isCorrectLang
+      return isNotDraft && isNotProtected && isCorrectLang
     },
   )
 

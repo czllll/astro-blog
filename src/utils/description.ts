@@ -69,6 +69,11 @@ export function getPostDescription(
   scene: ExcerptScene,
 ): string {
   const lang = post.data.lang || defaultLocale
+  const isProtectedWithoutDescription = post.data.protected && !post.data.description
+
+  if (isProtectedWithoutDescription) {
+    return ''
+  }
 
   if (post.data.description) {
     // Only truncate for og scene, return full description for other scenes

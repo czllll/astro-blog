@@ -104,6 +104,7 @@ const { Content, headings, remarkPluginFrontmatter } = await render(post)
   postTitle={post.data.title}
   postDescription={description}
   postSlug={post.id}
+  robotsContent={post.data.protected ? 'noindex, noarchive, nosnippet' : undefined}
   supportedLangs={supportedLangs}
 >
   <article class="heti">
@@ -135,7 +136,7 @@ const { Content, headings, remarkPluginFrontmatter } = await render(post)
       />
     </div>
     <!-- TOC -->
-    {post.data.toc && <TOC headings={headings} />}
+    {post.data.toc && !post.data.protected && <TOC headings={headings} />}
     <!-- Content -->
     <div id="post-content">
       <Content />
