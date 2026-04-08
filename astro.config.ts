@@ -18,6 +18,7 @@ import { rehypeImageProcessor } from './src/plugins/rehype-image-processor.mjs'
 import { remarkContainerDirectives } from './src/plugins/remark-container-directives.mjs'
 import { remarkLeafDirectives } from './src/plugins/remark-leaf-directives.mjs'
 import { remarkReadingTime } from './src/plugins/remark-reading-time.mjs'
+import { remarkWikiLinks } from './src/plugins/remark-wiki-links.mjs'
 
 const { url: site } = themeConfig.site
 const { imageHostURL } = themeConfig.preload ?? {}
@@ -66,6 +67,7 @@ export default defineConfig({
       remarkMath,
       remarkContainerDirectives,
       remarkLeafDirectives,
+      remarkWikiLinks,
       remarkReadingTime,
     ],
     rehypePlugins: [
