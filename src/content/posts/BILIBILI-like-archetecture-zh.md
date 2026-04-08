@@ -1,6 +1,6 @@
 ---
 title: "BILIBILI点赞架构"
-description: "挣扎的一年"
+description: "BILIBILI点赞架构解析"
 published: 2025-04-22
 updated: 2025-10-01
 tags:
